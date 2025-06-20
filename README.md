@@ -2,10 +2,11 @@
 
 A personal collection of projects showcasing my work as a developer. This portfolio includes projects I've built to practice, learn, and demonstrate my skills across different technologies.
 
-## 📂 Projects
+## 🗂️ Projects
 
-- ✅ Personal portfolio website (current project)
-- ✅ [Add more projects as you build them...]
+| Project | Description | Tech Stack |
+|---------|-------------|------------|
+| [Portfolio](./Portfolio/) | Personal portfolio website | HTML, CSS, JS |
 
 ## 🔧 Tech Stack
 
@@ -29,6 +30,8 @@ A personal collection of projects showcasing my work as a developer. This portfo
 - Practice and sharpen development skills
 - Explore modern web and mobile technologies
 - Build real-world, hands-on projects
+
+
 
 ## 📄 License
 
