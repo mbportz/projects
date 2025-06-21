@@ -378,6 +378,9 @@ footer ul li a i {
 }
 
 .back-to-top {
+   display: flex;
+   justify-content: center;
+   align-items: center;
    position: fixed;
    bottom: 70px;
    right: 30px;
@@ -390,7 +393,9 @@ footer ul li a i {
    font-size: 24px;
    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
    cursor: pointer;
-   transition: transform 0.3s ease, box-shadow 0.3s ease;
+   opacity: 0;
+   transform: translateY(50px);
+   transition: box-shadow 0.3s ease, opacity 0.6s ease, transform 0.6s ease;
 }
 
 .back-to-top:hover {
@@ -398,7 +403,13 @@ footer ul li a i {
    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
 }
 
-@media (max-width: 800px) {
+.back-to-top.show {
+   display: flex;
+   opacity: 1;
+   transform: translateY(0);
+}
+
+@media (max-width: 700) {
    .about-header {
       display: flex;
       flex-direction: column;
@@ -415,7 +426,7 @@ footer ul li a i {
       border-radius: 50px;
       transition: background-color 0.3s ease;
       margin-block: 20px;
-      flex: 1 1 clamp(200px, 2vw, 500px);
+      flex: 1 1 clamp(200px, 5vw, 500px);
    }
 }
 

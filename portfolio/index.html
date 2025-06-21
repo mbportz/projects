@@ -4,17 +4,17 @@
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-      <link rel="stylesheet" href="reset.css" />
-      <link rel="stylesheet" href="normalize.css" />
+      <link rel="stylesheet" href="styles/reset.css" />
+      <link rel="stylesheet" href="styles/normalize.css" />
       <link
          href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
          rel="stylesheet"
       />
       <link
          rel="stylesheet"
-         href="font-awesome-4.7.0/css/font-awesome.min.css"
+         href="assets/font-awesome-4.7.0/css/font-awesome.min.css"
       />
-      <link rel="stylesheet" href="main.css" />
+      <link rel="stylesheet" href="styles/main.css" />
       <title>Document</title>
    </head>
    <body>
@@ -214,9 +214,9 @@
       </main>
 
       <aside>
-         <button class="back-to-top" onclick="scrollToTop()">
+         <a href="#" class="back-to-top">
             <i class="fa fa-arrow-up fa-1x" aria-hidden="true"></i>
-         </button>
+         </a>
       </aside>
 
       <footer id="contacts" class="paddings">
@@ -248,5 +248,28 @@
             &copy; 2025 Marc Bryan Portuguez. All rights reserved.
          </p>
       </footer>
+
+      <script>
+         const button = document.querySelector(".back-to-top");
+
+         window.addEventListener("scroll", () => {
+            if (window.scrollY > 700) {
+               button.style.display = "flex";
+               // Force reflow to enable transition when adding 'show'
+               void button.offsetWidth;
+               button.classList.add("show");
+            } else {
+               button.classList.remove("show");
+            }
+         });
+
+         // Listen for animation end to remove from DOM
+         button.addEventListener("transitionend", (e) => {
+            console.log("event", e);
+            if (!button.classList.contains("show")) {
+               button.style.display = "none";
+            }
+         });
+      </script>
    </body>
 </html>
