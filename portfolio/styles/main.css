@@ -1,11 +1,15 @@
 html {
    scroll-behavior: smooth;
+   /* overscroll-behavior: none; */
 }
 
 body {
+   display: flex;
+   flex-direction: column;
    background: linear-gradient(-75deg, #2c1c54, #7d15ad);
    font-family: "Roboto", sans-serif;
    color: white;
+   overscroll-behavior: none;
 }
 
 a {
@@ -14,26 +18,97 @@ a {
 
 /* customs styles */
 .paddings {
-   padding-inline: min(15em, 20%);
+   padding-inline: clamp(10px, 8vw, 900px);
    padding-block: min(4em, 8%);
 }
 /* end of custom styles */
-
-nav {
+.main-nav {
    display: flex;
    justify-content: space-between;
    align-items: center;
    height: 9vh;
-   background-color: rgba(0, 0, 0, 0.2);
-   padding-inline: min(15em, 12%);
-   position: fixed;
+
+   padding-inline: clamp(10px, 8vw, 900px);
    top: 0;
    left: 0;
    width: 100%;
-   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-   backdrop-filter: blur(10px);
+
    box-sizing: border-box;
    z-index: 1;
+}
+
+.off-screen-menu {
+   border-top: 1px solid rgba(255, 255, 255, 0.2);
+   padding-inline: clamp(10px, 8vw, 900px);
+   display: none;
+   transition: 0.3s ease;
+   /* height: 50vh; */
+   /* background-color: rgba(0, 0, 0, 0.2); */
+   /* backdrop-filter: blur(10px); */
+   /* display: none; */
+}
+
+.off-screen-menu.active {
+   display: flex;
+}
+
+.ham-menu {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+   flex-grow: 0;
+   width: 40px;
+   height: 40px;
+   position: relative;
+   background-color: rgba(0, 0, 0, 0);
+   border: none;
+   display: none;
+}
+
+.ham-menu span {
+   height: 7px;
+   width: 100%;
+   background-color: rgb(180, 180, 180);
+   border-radius: 25px;
+   transform: translate(-50%, -50%);
+   transition: 0.3s ease;
+   left: 50%;
+   position: absolute;
+   top: 50%;
+}
+
+.ham-menu span:nth-child(1) {
+   top: 25%;
+}
+
+.ham-menu span:nth-child(3) {
+   top: 75%;
+}
+
+.ham-menu.active span:nth-child(1) {
+   position: relative;
+   top: 25%;
+   transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.ham-menu.active span:nth-child(2) {
+   opacity: 0;
+}
+
+.ham-menu.active span:nth-child(3) {
+   position: relative;
+   top: -32%;
+   transform: translate(-50%, 50%) rotate(-45deg);
+}
+
+nav {
+   display: flex;
+   flex-direction: column;
+   position: fixed;
+   width: 100%;
+   background-color: rgba(0, 0, 0, 0.2);
+   backdrop-filter: blur(10px);
+   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
 nav h2 {
@@ -54,9 +129,47 @@ nav ul li a:hover {
    color: white;
 }
 
-nav ul {
+.main-links {
    display: flex;
    gap: 30px;
+}
+
+.secondary-links {
+   display: flex;
+   flex-direction: column;
+}
+
+.secondary-links li {
+   padding-block: 1rem;
+}
+
+.main-nav label::after {
+   content: "X";
+}
+
+#toggle-nav:checked ~ nav .off-screen-menu {
+   display: none;
+}
+
+#toggle-nav:checked ~ nav .main-nav label::after {
+   content: "☰";
+}
+
+.menu {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   align-content: center;
+   color: rgb(175, 171, 171);
+   background-color: rgba(0, 0, 0, 0);
+   border: none;
+   font-size: 3rem;
+   display: none;
+}
+
+.menu:hover {
+   color: white;
+   cursor: pointer;
 }
 
 .navTitleContainer {
@@ -182,7 +295,7 @@ nav ul {
 .general-tech-stack > div {
    display: flex;
    flex-direction: column;
-   flex: 1 1 clamp(50px, 20vw, 100px);
+   flex: 1 1 clamp(50px, 20vw, 70px);
    background-color: rgba(255, 255, 255, 0.1);
    border-radius: 20px;
    padding-block: 20px;
@@ -344,16 +457,18 @@ footer ul {
    display: flex;
    /* gap: 40px; */
    flex-wrap: wrap;
+   justify-content: space-evenly;
 }
 
 footer ul li {
    display: flex;
+   margin: 20px;
    background-color: rgba(255, 255, 255, 0.07);
    border-radius: 50px;
    transition: background-color 0.3s ease;
    margin-block: 20px;
-   /* flex: 1 1 clamp(200px, 2vw, 500px); */
    justify-content: center;
+   flex-grow: 1;
 }
 
 footer ul li:hover {
@@ -409,7 +524,7 @@ footer ul li a i {
    transform: translateY(0);
 }
 
-@media (max-width: 700) {
+@media (max-width: 768px) {
    .about-header {
       display: flex;
       flex-direction: column;
@@ -428,10 +543,12 @@ footer ul li a i {
       margin-block: 20px;
       flex: 1 1 clamp(200px, 5vw, 500px);
    }
-}
 
-@media (min-width: 600px) {
-   footer ul {
-      gap: 40px;
+   .main-links {
+      display: none;
+   }
+
+   .ham-menu {
+      display: flex;
    }
 }

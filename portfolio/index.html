@@ -20,15 +20,28 @@
    <body>
       <header>
          <nav>
-            <div class="navTitleContainer">
+            <div class="main-nav">
                <h2>Portfolio</h2>
-            </div>
 
-            <div class="navLinksContainer">
-               <ul>
+               <ul class="main-links">
                   <li><a href="#">Home</a></li>
                   <li><a href="#about">About</a></li>
-                  <li><a href="#featured-projects">Porjects</a></li>
+                  <li><a href="#featured-projects">Projects</a></li>
+                  <li><a href="#contacts">Contacts</a></li>
+               </ul>
+
+               <button class="ham-menu">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+               </button>
+            </div>
+
+            <div class="off-screen-menu">
+               <ul class="secondary-links">
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#about">About</a></li>
+                  <li><a href="#featured-projects">Projects</a></li>
                   <li><a href="#contacts">Contacts</a></li>
                </ul>
             </div>
@@ -219,6 +232,17 @@
          </a>
       </aside>
 
+      <aside>
+         <div>
+            <ul>
+               <li><a href="#">Home</a></li>
+               <li><a href="#about">About</a></li>
+               <li><a href="#featured-projects">Projects</a></li>
+               <li><a href="#contacts">Contacts</a></li>
+            </ul>
+         </div>
+      </aside>
+
       <footer id="contacts" class="paddings">
          <h1>Let's Work Together</h1>
          <p>
@@ -251,6 +275,10 @@
 
       <script>
          const button = document.querySelector(".back-to-top");
+         const hamMenu = document.querySelector(".ham-menu");
+         const offScreenMenu = document.querySelector(".off-screen-menu");
+         const offScreenMenuLinks =
+            document.querySelectorAll(".off-screen-menu a");
 
          window.addEventListener("scroll", () => {
             if (window.scrollY > 700) {
@@ -269,6 +297,29 @@
             if (!button.classList.contains("show")) {
                button.style.display = "none";
             }
+         });
+
+         window.addEventListener("resize", () => {
+            const currentWidth = window.innerWidth;
+
+            if (currentWidth > 768 && hamMenu) {
+               hamMenu.classList.remove("active");
+               offScreenMenu.classList.remove("active");
+            }
+         });
+
+         hamMenu.addEventListener("click", () => {
+            hamMenu.classList.toggle("active");
+            offScreenMenu.classList.toggle("active");
+         });
+
+         offScreenMenuLinks.forEach((link) => {
+            link.addEventListener("click", () => {
+               if (hamMenu) {
+                  hamMenu.classList.remove("active");
+                  offScreenMenu.classList.remove("active");
+               }
+            });
          });
       </script>
    </body>
