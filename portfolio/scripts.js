@@ -2,6 +2,7 @@ const button = document.querySelector(".back-to-top");
 const hamMenu = document.querySelector(".ham-menu");
 const offScreenMenu = document.querySelector(".off-screen-menu");
 const offScreenMenuLinks = document.querySelectorAll(".off-screen-menu a");
+const copyEmailLink = document.querySelector(".copy-email-link");
 
 window.addEventListener("scroll", () => {
    if (window.scrollY > 700) {
@@ -41,4 +42,22 @@ offScreenMenuLinks.forEach((link) => {
          offScreenMenu.classList.remove("active");
       }
    });
+});
+
+copyEmailToClipBoard = () => {
+   const email = "mbportuguez2@gmail.com";
+
+   navigator.clipboard
+      .writeText(email)
+      .then(() => {
+         alert("Email Copied");
+      })
+      .catch((err) => {
+         console.error("Failed To Copy", err);
+         alert("Failed to Copy Email");
+      });
+};
+
+copyEmailLink.addEventListener("click", () => {
+   copyEmailToClipBoard();
 });
