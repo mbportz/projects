@@ -6,7 +6,7 @@ A personal collection of projects showcasing my work as a developer. This portfo
 
 | Project | Description | Tech Stack |
 |---------|-------------|------------|
-| [Portfolio](./portfolio/) | Personal portfolio website | HTML, CSS, JS |
+| [Portfolio](./portfolio/) | Personal portfolio website | HTML, CSS, JS, SASS, VERCEL |
 | [Component Animations](./component-animations/) | Learn animations | HTML, CSS|
 
 ## 🔧 Tech Stack
