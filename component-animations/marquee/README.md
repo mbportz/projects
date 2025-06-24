@@ -31,3 +31,49 @@ This project demonstrates a simple horizontal marquee animation using HTML and C
    <li class="item item3"></li>
    <!-- Add more items as needed -->
 </ul>
+```
+
+```css
+.marquee {
+  position: relative;
+  width: 600px;
+  height: 60px;
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  background: #f0f0f0;
+  margin: 2rem auto;
+  padding: 0;
+  list-style: none;
+}
+
+.item {
+  position: absolute;
+  top: 0;
+  width: 120px;
+  height: 60px;
+  background: red;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  animation: scrollLeft 6s linear infinite;
+  /* Use a CSS variable for staggered delay */
+  animation-delay: calc(var(--item-index, 0) * 2s);
+}
+
+/* Example for 3 items */
+.item1 { --item-index: 0; left: 0; }
+.item2 { --item-index: 1; left: 120px; }
+.item3 { --item-index: 2; left: 240px; }
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-600px);
+  }
+}
+```
