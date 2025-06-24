@@ -1,0 +1,54 @@
+.marquee {
+   width: 100%;
+   max-width: 1532px;
+   margin-inline: auto;
+   position: relative;
+   height: 100px;
+   overflow: hidden;
+   mask-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 1) 20%,
+      rgba(0, 0, 0, 1) 80%,
+      rgba(0, 0, 0, 0)
+   );
+}
+
+.item {
+   position: absolute;
+   height: 100%;
+   width: 300px;
+   background-color: green;
+   border-radius: 10px;
+   list-style: none;
+   background-color: red;
+   left: max(calc(300px * 5), 100%);
+   animation-name: scrollLeft;
+   animation-duration: 40s;
+   animation-timing-function: linear;
+   animation-iteration-count: infinite;
+   animation-delay: calc(40s / 5 * (5 - (var(--item-index, 1))) * -1);
+}
+
+/* Replace 5 with your actual marquee-max-icon value */
+.item1:nth-child(1) {
+   --item-index: 1;
+}
+.item2:nth-child(2) {
+   --item-index: 2;
+}
+.item3:nth-child(3) {
+   --item-index: 3;
+}
+.item4:nth-child(4) {
+   --item-index: 4;
+}
+.item5:nth-child(5) {
+   --item-index: 5;
+}
+
+@keyframes scrollLeft {
+   to {
+      left: -200px;
+   }
+}
