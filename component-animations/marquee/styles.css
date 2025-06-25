@@ -1,3 +1,9 @@
+body {
+   height: 100vh;
+   display: flex;
+   align-items: center;
+}
+
 .marquee {
    width: 100%;
    max-width: 1532px;
@@ -15,19 +21,24 @@
 }
 
 .item {
+   display: Flex;
+   justify-content: center;
+   align-items: center;
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 2rem;
+   font-weight: bolder;
    position: absolute;
+
    height: 100%;
    width: 300px;
-   background-color: green;
    border-radius: 10px;
    list-style: none;
-   background-color: red;
-   left: max(calc(300px * 5), 100%);
+   left: max(calc(200px * 7), 100%);
    animation-name: scrollLeft;
    animation-duration: 40s;
    animation-timing-function: linear;
    animation-iteration-count: infinite;
-   animation-delay: calc(40s / 5 * (5 - (var(--item-index, 1))) * -1);
+   animation-delay: calc(40s / 7 * (7 - (var(--item-index, 1))) * -1);
 }
 
 /* Replace 5 with your actual marquee-max-icon value */
@@ -45,6 +56,12 @@
 }
 .item5:nth-child(5) {
    --item-index: 5;
+}
+.item6:nth-child(6) {
+   --item-index: 6;
+}
+.item7:nth-child(7) {
+   --item-index: 7;
 }
 
 @keyframes scrollLeft {
