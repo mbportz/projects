@@ -32,7 +32,7 @@ A simple, customizable horizontal marquee animation built with HTML and CSS. Thi
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/marquee-component-animation.git
+git clone https://github.com/mbportz/projects.git
 
 # Navigate to the project directory
-cd marquee-component-animation
+cd cd projects/component-animations/marquee
