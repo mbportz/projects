@@ -12,13 +12,13 @@ A simple animated card component that features a glowing, spinning border effect
 
 ## Features
 
-- Animated spinning border using CSS conic-gradient
-- Glowing border effect with blur
-- Responsive and centered card layout
+-  Animated spinning border using CSS conic-gradient
+-  Glowing border effect with blur
+-  Responsive and centered card layout
 
 ## Demo
 
-![Demo Screenshot](screenshot.png)
+![Border Animation Demo](assets/border-animation.gif)
 
 > _Replace with a real screenshot if available._
 
@@ -26,8 +26,8 @@ A simple animated card component that features a glowing, spinning border effect
 
 ### Prerequisites
 
-- A modern web browser (Chrome, Firefox, Edge, Safari)
-- No additional dependencies required
+-  A modern web browser (Chrome, Firefox, Edge, Safari)
+-  No additional dependencies required
 
 ### Installation
 
@@ -38,4 +38,4 @@ git clone https://github.com/mbportz/projects.git
 # Navigate to the project directory
 cd projects/component-animations/border-animation-card
 
-# Open [index.html](http://_vscodecontentref_/0) in your browser
+```
