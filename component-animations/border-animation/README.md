@@ -1,100 +1,41 @@
-# Animated Card Border with CSS
+# Border Animation Card
 
-This project demonstrates a pure CSS animated glowing border effect around a card using modern CSS features, including CSS custom properties and conic gradients.
-
----
-
-## 🔧 Features
-
-- Fully animated rotating border.
-- Glowing blur effect.
-- Pure CSS solution (no JavaScript).
-- Modern CSS custom properties with `@property` declaration.
-- Smooth, infinite loop animation.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Tech: HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)]()
+[![Tech: CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)]()
 
 ---
 
-## 🌎 Live Demo
+## Description
 
-The card stays centered with a rotating animated border that glows softly around it.
+A simple animated card component that features a glowing, spinning border effect using pure CSS. This project demonstrates how to use CSS custom properties, conic gradients, and keyframe animations to create visually appealing UI components. Ideal for web developers looking to enhance their UI with modern CSS techniques.
 
----
+## Features
 
-## 🖌️ How It Works
+- Animated spinning border using CSS conic-gradient
+- Glowing border effect with blur
+- Responsive and centered card layout
 
-### 1. Layout
+## Demo
 
-- The card container (`#card`) is centered on the page using Flexbox.
-- The actual animated border is created using the `::before` and `::after` pseudo-elements.
+![Demo Screenshot](screenshot.png)
 
-### 2. Animated Border
+> _Replace with a real screenshot if available._
 
-- The border uses a `conic-gradient` background image.
-- A CSS custom property `--angle` controls the rotation angle.
-- The `@property` rule declares `--angle` as an animatable property.
-- The `@keyframes spin` animation rotates the angle from `0deg` to `360deg` continuously.
+## Getting Started
 
-### 3. Glowing Effect
+### Prerequisites
 
-- The `::before` pseudo-element adds a blur (`filter: blur(1.5rem)`) to create a glow effect behind the main border.
-- Both pseudo-elements are positioned behind the card content using `z-index: -1`.
+- A modern web browser (Chrome, Firefox, Edge, Safari)
+- No additional dependencies required
 
----
+### Installation
 
-## 🌐 Browser Support
+```bash
+# Clone the repository
+git clone https://github.com/mbportz/projects.git
 
-- `@property` is an experimental feature and supported only in modern browsers (Chrome 111+, Edge, etc.).
-- Without `@property`, the animation may still work but may not be as smooth or properly interpolated.
+# Navigate to the project directory
+cd projects/component-animations/border-animation-card
 
----
-
-## 📃 Code Snippet
-
-```css
-@property --angle {
-  syntax: "<angle>";
-  initial-value: 0deg;
-  inherits: false;
-}
-
-@keyframes spin {
-  from { --angle: 0deg; }
-  to { --angle: 360deg; }
-}
-
-#card::after, #card::before {
-  content: "";
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background-image: conic-gradient(from var(--angle), transparent 80%, blue);
-  top: 50%;
-  left: 50%;
-  translate: -50% -50%;
-  z-index: -1;
-  padding: 3px;
-  border-radius: 1rem;
-  animation: 3s spin linear infinite;
-}
-
-#card::before {
-  filter: blur(1.5rem);
-  opacity: 0.5;
-}
-```
-
----
-
-## 📖 Customization
-
-You can easily customize:
-
-- **Gradient colors**
-- **Animation speed (duration)**
-- **Blur strength**
-- **Card size and shape**
-
----
-
-Enjoy building beautiful animated card borders with pure CSS!
-
+# Open [index.html](http://_vscodecontentref_/0) in your browser
