@@ -35,4 +35,4 @@ A simple, customizable horizontal marquee animation built with HTML and CSS. Thi
 git clone https://github.com/mbportz/projects.git
 
 # Navigate to the project directory
-cd cd projects/marquee
+cd cd projects/component-animations/marquee
