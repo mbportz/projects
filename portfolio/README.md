@@ -1,19 +1,42 @@
-# Portfolio Website
+# 💼 Portfolio Website
 
-This is a personal portfolio website project built with HTML, SCSS (Sass), and JavaScript. The project uses modular SCSS for styling, with a structure that separates variables, components, and sections for maintainability and scalability.
+---
 
-## Features
+### 🔧 **Tech Stack**
 
-- Responsive design for desktop and mobile
-- Modular SCSS with variables and partials
-- Live Sass compilation with VS Code integration
-- Modern layout and navigation
-- Easy to customize and extend
+![HTML5](https://img.shields.io/badge/HTML5-orange?logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-blue?logo=css3&logoColor=white)
+![SCSS](https://img.shields.io/badge/Sass-SCSS-pink?logo=sass&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow?logo=javascript&logoColor=black)
+![Visual Studio Code](https://img.shields.io/badge/VSCode-Editor-007ACC?logo=visualstudiocode&logoColor=white)
 
-## Project Structure
+---
 
-```
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Visit%20Site-brightgreen)](https://portfolio-marc-five.vercel.app/)
+![License](https://img.shields.io/badge/license-MIT-green)
+![Last Commit](https://img.shields.io/github/last-commit/mbportz/projects)
+
+---
+
+> 🚀 **A fully responsive, modern personal portfolio website built using HTML, SCSS (Sass), and JavaScript — fully customizable, modular, and easy to maintain.**
+
+---
+
+## ✨ Features
+
+-  📱 Mobile-first responsive design
+-  🎯 Modular SCSS architecture (variables, components, sections)
+-  ⚡ Live Sass Compilation with VS Code integration
+-  🎨 Modern clean layout and navigation
+-  🚰 Easy customization and scalability
+
+---
+
+## 📂 Project Structure
+
+```bash
 portfolio/
+│
 ├── index.html
 ├── styles/
 │   ├── scss/
@@ -26,68 +49,90 @@ portfolio/
 ├── scripts/
 │   └── main.js
 ├── images/
-│   └── ...
 └── README.md
 ```
 
-- **scss/**: Source SCSS files (main entry: `main.scss`)
-- **css/**: Compiled CSS output (generated automatically)
-- **scripts/**: JavaScript files
-- **images/**: Project images and assets
+---
 
-## Getting Started
+## 🚀 Getting Started
 
-### Prerequisites
+### ✅ Prerequisites
 
-- [Node.js](https://nodejs.org/) (for CLI Sass, optional)
-- [VS Code](https://code.visualstudio.com/) (recommended)
-- [Live Sass Compiler extension](https://marketplace.visualstudio.com/items?itemName=glenn2223.live-sass) for VS Code
+| Tool               | Link                                                                                        |
+| ------------------ | ------------------------------------------------------------------------------------------- |
+| Node.js (optional) | [nodejs.org](https://nodejs.org/)                                                           |
+| Visual Studio Code | [code.visualstudio.com](https://code.visualstudio.com/)                                     |
+| Live Sass Compiler | [VSCode Extension](https://marketplace.visualstudio.com/items?itemName=glenn2223.live-sass) |
 
-### Installation
+---
 
-1. **Clone or download this repository.**
-2. **Open the project folder in VS Code.**
+### 🔧 Installation
 
-### Running the Project
+```bash
+git clone https://github.com/yourusername/your-repo.git
+cd your-repo
+```
 
-#### Using Live Sass Compiler (Recommended)
+---
 
-1. **Install the Live Sass Compiler extension** in VS Code.
-2. **Check your `.vscode/settings.json`** (or global settings) for the following configuration:
-    ```json
-    "liveSassCompile.settings.formats": [
-      {
-        "format": "expanded",
-        "extensionName": ".css",
-        "savePath": "/styles/css"
-      }
-    ]
-    ```
-3. **Click "Watch Sass"** at the bottom of VS Code.
-4. **Edit and save any `.scss` file** (e.g., `main.scss`). The compiled CSS will appear in `styles/css/main.css`.
-5. **Open `index.html`** in your browser to view the site.
+### ▶ Running the Project
 
-#### Using Sass CLI (Alternative)
+#### Option 1 — Live Sass Compiler (Recommended)
 
-If you prefer using the command line:
+1️⃣ Install the **Live Sass Compiler** extension in VSCode.
+2️⃣ Update `.vscode/settings.json`:
 
-```sh
+```json
+"liveSassCompile.settings.formats": [
+  {
+    "format": "expanded",
+    "extensionName": ".css",
+    "savePath": "/styles/css"
+  }
+]
+```
+
+3️⃣ Click **"Watch Sass"** in VSCode.
+4️⃣ Edit any `.scss` file to generate CSS.
+
+#### Option 2 — Sass CLI
+
+```bash
 sass --watch styles/scss/main.scss:styles/css/main.css
 ```
 
-This will watch for changes in your SCSS and output CSS to the correct folder.
+---
 
-## Customization
+## 🎨 Customization
 
-- **Edit SCSS variables** in `scss/_abstracts.scss` to change colors, fonts, and other design tokens.
-- **Add or modify components** in `scss/_components.scss`.
-- **Update content** in `index.html` and images in the `images/` folder.
+-  Design tokens: `scss/_abstracts.scss` (colors, fonts)
+-  Components: `scss/_components.scss` (buttons, cards, etc.)
+-  Sections: `scss/_sections.scss` (layout structure)
+-  Content: `index.html`
+-  Assets: `images/`
 
-## Troubleshooting
+---
 
-- If CSS is not updating, make sure Live Sass Compiler is running and your settings are correct.
-- If you delete the generated CSS, simply save your SCSS file again or restart the watcher to regenerate it.
+## 🧹 Troubleshooting
 
-## License
+-  Make sure Live Sass Compiler is running.
+-  Verify correct paths in your VSCode settings.
+-  If output is missing, save any `.scss` file again.
 
-This project is for personal and educational use. Feel free to customize and extend it for your own portfolio!
+---
+
+## 📄 License
+
+This project is licensed under the MIT License — feel free to modify, customize, and use it for personal or professional purposes.
+
+---
+
+## 🌐 Connect with Me
+
+-  🔗 [Portfolio Website](https://your-portfolio-url.com)
+-  🐙 [GitHub](https://github.com/yourusername)
+-  💼 [LinkedIn](https://linkedin.com/in/yourusername)
+
+---
+
+🚀 **This project is ready for recruiters, employers, and open-source contributors.**
