@@ -1,6 +1,7 @@
 @use "../abstracts/" as *;
 
 #weather {
+   margin-top: 50px;
    @media (max-width: 1032px) {
       flex-wrap: wrap;
 
@@ -11,7 +12,6 @@
 
       .weather-content {
          flex-basis: 1032px;
-         // flex-wrap: nowrap;
       }
    }
 }
@@ -52,7 +52,6 @@
 .weather-content {
    display: flex;
    flex-wrap: wrap;
-   // max-width: 370px;
    width: 370px;
    justify-content: flex-end;
    flex-wrap: wrap;
@@ -64,13 +63,12 @@
 }
 
 .weather-card {
-   flex: 1;
+   flex: 1 1 18%;
    display: flex;
    flex-direction: column;
    align-items: center;
    justify-content: center;
-   width: 100%;
-   min-width: 150px;
+   min-width: 10px;
    min-height: 120px;
    background-color: rgba(255, 255, 255, 0.05);
    margin: 10px;
@@ -93,6 +91,6 @@
    }
 
    @media (max-width: 1032px) {
-      flex-basis: 300px;
+      flex: 1 1 40%;
    }
 }
