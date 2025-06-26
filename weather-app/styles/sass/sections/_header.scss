@@ -10,6 +10,7 @@ header {
    justify-content: space-between;
    flex-wrap: wrap;
    width: 100%;
+   line-height: 30px;
 
    h1 {
       font-size: 3rem;
@@ -17,6 +18,7 @@ header {
       color: white;
       text-align: center;
       text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+      display: block;
    }
 
    p {
