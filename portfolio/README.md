@@ -69,7 +69,7 @@ portfolio/
 ### 🔧 Installation
 
 ```bash
-git clone https://github.com/yourusername/your-repo.git
+git clone https://github.com/mbportz/projects.git
 cd your-repo
 ```
 
@@ -129,9 +129,9 @@ This project is licensed under the MIT License — feel free to modify, customiz
 
 ## 🌐 Connect with Me
 
--  🔗 [Portfolio Website](https://your-portfolio-url.com)
--  🐙 [GitHub](https://github.com/yourusername)
--  💼 [LinkedIn](https://linkedin.com/in/yourusername)
+-  🔗 [Portfolio Website](https://portfolio-marc-five.vercel.app/)
+-  🐙 [GitHub](https://github.com/mbportz)
+-  💼 [LinkedIn](https://linkedin.com/in/marc-bryan-portuguez-0a67a1145)
 
 ---
 
