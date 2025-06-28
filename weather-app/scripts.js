@@ -12,14 +12,24 @@ $(document).ready(() => {
 
          $.get(fetchLocation, (data, status) => {
             console.log("location status", status);
-            const lat = data[0].lat;
-            const lon = data[0].lon;
+            const { lat, lon, name } = data[0];
+
             const fetchWeather = `http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${API_KEY}`;
 
             $.get(fetchWeather, (data, status) => {
-               console.log("weather status", status);
-               alert(status);
-               console.log(data);
+               const { dt_txt } = data.list[0];
+               const firstForecastedDate = dt_txt.split(" ")[1];
+
+               const filteredForecasting = data.list.filter((value) => {
+                  const forecastedDate = value.dt_txt.split(" ")[1];
+
+                  if (forecastedDate === firstForecastedDate) return value;
+               });
+
+               // assign items on weather section
+
+               // loop through forecast section
+               // convert days to day
             });
          });
       } catch (err) {
