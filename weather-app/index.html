@@ -34,32 +34,32 @@
             <div>
                <img src="assets/cloud-solid.svg" alt="" />
                <div>
-                  <p>18&deg;</p>
-                  <p>Feels like 20&deg;</p>
+                  <p class="weather-header-temp">18&deg;</p>
+                  <p class="weather-header-feels">Feels like 20&deg;</p>
                </div>
             </div>
          </div>
 
          <div class="weather-content">
-            <div class="weather-card">
+            <div class="weather-card weather-wind-speed">
                <img src="assets/wind-solid.svg" alt="" />
                <p>12 km/h</p>
                <p>Wind Speed</p>
             </div>
 
-            <div class="weather-card">
+            <div class="weather-card weather-humidity">
                <img src="assets/droplet-solid.svg" alt="" />
                <p>65%</p>
                <p>Humidity</p>
             </div>
 
-            <div class="weather-card">
+            <div class="weather-card weather-visibility">
                <img src="assets/eye-solid.svg" alt="" />
                <p>10km</p>
                <p>Visibility</p>
             </div>
 
-            <div class="weather-card">
+            <div class="weather-card weather-feels-like">
                <img src="assets/temperature-full-solid.svg" alt="" />
                <p>20&deg;</p>
                <p>Feels Like</p>
@@ -71,7 +71,7 @@
          <h2>📅 5-Day Forecast</h2>
 
          <div class="forecast-container">
-            <div class="forecast-card">
+            <div class="forecast-card card1">
                <p>Today</p>
                <p>Jan 25</p>
                <img src="assets/cloud-solid.svg" alt="" />
@@ -80,7 +80,7 @@
                <p>12 &deg;</p>
             </div>
 
-            <div class="forecast-card">
+            <div class="forecast-card card2">
                <p>Tomorrow</p>
                <p>Jan 26</p>
                <img src="assets/sun-solid.svg" alt="" />
@@ -89,7 +89,7 @@
                <p>14&deg;</p>
             </div>
 
-            <div class="forecast-card">
+            <div class="forecast-card card3">
                <p>Saturday</p>
                <p>Jan 26</p>
                <img src="assets/sun-solid.svg" alt="" />
@@ -98,7 +98,7 @@
                <p>14&deg;</p>
             </div>
 
-            <div class="forecast-card">
+            <div class="forecast-card card4">
                <p>Sunday</p>
                <p>Jan 26</p>
                <img src="assets/sun-solid.svg" alt="" />
@@ -107,7 +107,7 @@
                <p>14&deg;</p>
             </div>
 
-            <div class="forecast-card">
+            <div class="forecast-card card5">
                <p>Monday</p>
                <p>Jan 26</p>
                <img src="assets/sun-solid.svg" alt="" />
@@ -118,7 +118,8 @@
          </div>
       </section>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-      <script src="config.js"></script>
-      <script src="scripts.js"></script>
+      <script src="scripts/config.js"></script>
+      <script src="scripts/utils.js"></script>
+      <script src="scripts/main.js"></script>
    </body>
 </html>
