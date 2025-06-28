@@ -53,7 +53,40 @@ $(document).ready(() => {
                   `${Math.round(main.feels_like)}°`
                );
 
-               filteredForecasting.map(() => {});
+               filteredForecasting.forEach((item, index) => {
+                  const { weather, main, dt_txt } = item;
+                  const date = new Date(dt_txt);
+                  const dayName =
+                     index === 0
+                        ? "Today"
+                        : index === 1
+                        ? "Tomorrow"
+                        : DAYS_OF_THE_WEEK[date.getDay()];
+                  
+                  const MonthDay = `${
+                     MONTHS[date.getMonth()]
+                  } ${date.getDate()}`;
+
+                  $(`.card${index + 1} p`)
+                     .eq(0)
+                     .text(dayName);
+                  $(`.card${index + 1} p`)
+                     .eq(1)
+                     .text(MonthDay);
+                  $(`.card${index + 1} img`).attr(
+                     "src",
+                     WEATHER_STATUS[weather[0].description].src
+                  );
+                  $(`.card${index + 1} p`)
+                     .eq(2)
+                     .text(WEATHER_STATUS[weather[0].description].status);
+                  $(`.card${index + 1} p`)
+                     .eq(3)
+                     .text(`${Math.round(main.temp)}°`);
+                  $(`.card${index + 1} p`)
+                     .eq(4)
+                     .text(`${Math.round(main.feels_like)}°`);
+               });
 
                // loop through forecast section
                // convert days to day

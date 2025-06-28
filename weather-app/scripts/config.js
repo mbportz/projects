@@ -21,3 +21,28 @@ const WEATHER_STATUS = {
       src: "assets/cloud-rain-solid.svg",
    },
 };
+
+const DAYS_OF_THE_WEEK = [
+   "Monday",
+   "Tuesday",
+   "Wednesday",
+   "Thursday",
+   "Friday",
+   "Saturday",
+   "Sunday",
+];
+
+const MONTHS = [
+   "January",
+   "February",
+   "March",
+   "April",
+   "May",
+   "June",
+   "July",
+   "August",
+   "September",
+   "October",
+   "November",
+   "December",
+];
