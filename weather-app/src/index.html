@@ -3,20 +3,19 @@
    <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Document</title>
+      <title><%= htmlWebpackPlugin.options.title %></title>
+      <link rel="icon" type="image/png" href="assets/favicon.png" />
       <link
          href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
          rel="stylesheet"
       />
-      <link rel="stylesheet" href="styles/css/normalize.css" />
-      <link rel="stylesheet" href="styles/css/reset.css" />
-      <link rel="stylesheet" href="styles/css/styles.css" />
+      <link rel="stylesheet" href="./styles/css/" />
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
    </head>
    <body>
       <header>
-         <h1>Weather App</h1>
-         <p>Stay updated with current weather conditions and forecasts</p>
+         <h1>SkyCast</h1>
+         <p>The only app you need for your weather needs</p>
          <form action="" class="form">
             <input
                id="form-input-location"
@@ -26,13 +25,15 @@
             <input id="form-submit" type="submit" value="Search" />
          </form>
       </header>
-
+      <aside class="loader-container">
+         <div class="loader"></div>
+      </aside>
       <section id="weather" class="container">
          <div class="weather-header">
             <h2>London</h2>
-            <p>Partly Cloudy</p>
+            <p class="weather-status">Partly Cloudy</p>
             <div>
-               <img src="assets/cloud-solid.svg" alt="" />
+               <img class="weather-icon" src="" alt="" />
                <div>
                   <p class="weather-header-temp">18&deg;</p>
                   <p class="weather-header-feels">Feels like 20&deg;</p>
@@ -41,26 +42,26 @@
          </div>
 
          <div class="weather-content">
-            <div class="weather-card weather-wind-speed">
-               <img src="assets/wind-solid.svg" alt="" />
+            <div id="weather-wind-speed" class="weather-card">
+               <img alt="" />
                <p>12 km/h</p>
                <p>Wind Speed</p>
             </div>
 
-            <div class="weather-card weather-humidity">
-               <img src="assets/droplet-solid.svg" alt="" />
+            <div id="weather-humidity" class="weather-card">
+               <img alt="" />
                <p>65%</p>
                <p>Humidity</p>
             </div>
 
-            <div class="weather-card weather-visibility">
-               <img src="assets/eye-solid.svg" alt="" />
+            <div id="weather-visibility" class="weather-card">
+               <img alt="" />
                <p>10km</p>
                <p>Visibility</p>
             </div>
 
-            <div class="weather-card weather-feels-like">
-               <img src="assets/temperature-full-solid.svg" alt="" />
+            <div id="weather-feels-like" class="weather-card">
+               <img alt="" />
                <p>20&deg;</p>
                <p>Feels Like</p>
             </div>
@@ -74,7 +75,7 @@
             <div class="forecast-card card1">
                <p>Today</p>
                <p>Jan 25</p>
-               <img src="assets/cloud-solid.svg" alt="" />
+               <img src="" alt="" />
                <p>Partly Cloudy</p>
                <p>20 &deg;</p>
                <p>12 &deg;</p>
@@ -83,7 +84,7 @@
             <div class="forecast-card card2">
                <p>Tomorrow</p>
                <p>Jan 26</p>
-               <img src="assets/sun-solid.svg" alt="" />
+               <img src="" alt="" />
                <p>Clear Sky</p>
                <p>22&deg;</p>
                <p>14&deg;</p>
@@ -92,7 +93,7 @@
             <div class="forecast-card card3">
                <p>Saturday</p>
                <p>Jan 26</p>
-               <img src="assets/sun-solid.svg" alt="" />
+               <img src="" alt="" />
                <p>Clear Sky</p>
                <p>22&deg;</p>
                <p>14&deg;</p>
@@ -101,7 +102,7 @@
             <div class="forecast-card card4">
                <p>Sunday</p>
                <p>Jan 26</p>
-               <img src="assets/sun-solid.svg" alt="" />
+               <img src="" alt="" />
                <p>Clear Sky</p>
                <p>22&deg;</p>
                <p>14&deg;</p>
@@ -110,7 +111,7 @@
             <div class="forecast-card card5">
                <p>Monday</p>
                <p>Jan 26</p>
-               <img src="assets/sun-solid.svg" alt="" />
+               <img src="" alt="" />
                <p>Clear Sky</p>
                <p>22&deg;</p>
                <p>14&deg;</p>
@@ -118,8 +119,5 @@
          </div>
       </section>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-      <script src="scripts/config.js"></script>
-      <script src="scripts/utils.js"></script>
-      <script src="scripts/main.js"></script>
    </body>
 </html>
