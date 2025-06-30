@@ -1,4 +1,4 @@
-@use "../abstracts/" as *;
+// @use "../../styles/sass/abstracts/" as *;
 
 #weather {
    margin-top: 50px;
@@ -12,7 +12,7 @@
          align-items: center;
       }
 
-      .weather-content {
+      #weather-content {
          flex-basis: 1032px;
       }
    }
@@ -51,7 +51,7 @@
    }
 }
 
-.weather-content {
+#weather-content {
    display: flex;
    flex-wrap: wrap;
    width: 370px;
@@ -64,35 +64,4 @@
    }
 }
 
-.weather-card {
-   flex: 1 1 18%;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   justify-content: center;
-   min-width: 10px;
-   min-height: 120px;
-   background-color: rgba(255, 255, 255, 0.05);
-   margin: 10px;
-   border-radius: 20px;
-   flex-basis: 150px;
-   gap: 10px;
 
-   img {
-      height: 2rem;
-   }
-
-   p {
-      font-size: 1rem;
-      font-weight: 700;
-   }
-
-   p:last-child {
-      font-weight: normal;
-      opacity: 0.5;
-   }
-
-   @media (max-width: 1032px) {
-      flex: 1 1 40%;
-   }
-}
