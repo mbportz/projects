@@ -28,10 +28,10 @@ function updateWeatherHeader(weatherData) {
       `Feels like ${Math.round(main.feels_like)}°`
    );
 
-   $(".weather-wind-speed p:first-of-type").text(`${wind.speed} m/s`);
-   $(".weather-humidity p:first-of-type").text(`${main.humidity}%`);
-   $(".weather-visibility p:first-of-type").text(`${visibility / 1000}km`);
-   $(".weather-feels-like p:first-of-type").text(
+   $("#weather-wind-speed p:first-of-type").text(`${wind.speed} m/s`);
+   $("#weather-humidity p:first-of-type").text(`${main.humidity}%`);
+   $("#weather-visibility p:first-of-type").text(`${visibility / 1000}km`);
+   $("#weather-feels-like p:first-of-type").text(
       `${Math.round(main.feels_like)}°`
    );
 }
@@ -96,7 +96,7 @@ export function getWeatherForecastAndUpdate(location) {
          getUpdateWeatherForecast(lat, lon);
       })
       .fail((err) => {
-         console.warn;
+         console.warn(err);
       });
 }
 

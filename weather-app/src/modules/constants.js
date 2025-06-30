@@ -5,6 +5,11 @@ import cloudyDay from "../assets/images/cloudy-day.svg";
 import rainyDay from "../assets/images/cloud-rain-solid.svg";
 import fewClouds from "../assets/images/weather-few-clouds-svgrepo-com.svg";
 
+import wind from "../assets/images/wind-solid.svg";
+import humidity from "../assets/images/droplet-solid.svg";
+import visibility from "../assets/images/eye-solid.svg";
+import temp from "../assets/images/temperature-full-solid.svg";
+
 export const WEATHER_STATUS = {
    "broken clouds": { status: "Cloudy", src: solidCloud },
    "scattered clouds": {
@@ -47,4 +52,31 @@ export const MONTHS = [
    "October",
    "November",
    "December",
+];
+
+export const weatherAttributes = [
+   {
+      title: "-- km/h",
+      subtitle: "Wind Speed",
+      cardId: "weather-wind-speed",
+      imgSrc: wind,
+   },
+   {
+      title: "--%",
+      subtitle: "Humidity",
+      cardId: "weather-humidity",
+      imgSrc: humidity,
+   },
+   {
+      title: "--km",
+      subtitle: "Visibility",
+      cardId: "weather-visibility",
+      imgSrc: visibility,
+   },
+   {
+      title: "--°",
+      subtitle: "Visibility",
+      cardId: "weather-feels-like",
+      imgSrc: temp,
+   },
 ];

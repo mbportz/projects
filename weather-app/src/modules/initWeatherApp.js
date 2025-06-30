@@ -3,18 +3,30 @@ import {
    getWeatherForecastAndUpdate,
 } from "./weatherForecastHandler.js";
 
-import wind from "../assets/images/wind-solid.svg";
-import humidity from "../assets/images/droplet-solid.svg";
-import visibility from "../assets/images/eye-solid.svg";
-import temp from "../assets/images/temperature-full-solid.svg";
+import { Header } from "../components/Header";
+import { Weather } from "../components/Weather";
+import { Forecast } from "../components/Forecast";
+import { Loader } from "../components/Loader";
 
 export function initWeatherApp() {
    $(document).ready(() => {
-      
-      $("#weather-wind-speed img").attr("src", wind);
-      $("#weather-humidity img").attr("src", humidity);
-      $("#weather-visibility img").attr("src", visibility);
-      $("#weather-feels-like img").attr("src", temp);
+      $("body").append('<div id="app-root"></div>');
+
+      const header = Header({
+         title: "SkyCast",
+         subTitle: "The only app you need for your weather needs",
+      });
+
+      const weather = Weather();
+      const forecast = Forecast();
+      const loader = Loader();
+
+      const $root = $("#app-root").empty();
+
+      $root.append(header);
+      $root.append(weather);
+      $root.append(forecast);
+      $root.append(loader);
 
       updateForecastWithCurrentLocation();
 

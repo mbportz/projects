@@ -1,4 +1,5 @@
-import { API_KEY, BASE_URL } from "./config"
+const API_KEY = process.env.API_KEY
+const BASE_URL = process.env.BASE_URL
 
 export function getAPILocationCoords(location) {
    const fetchLocation = `${BASE_URL}/geo/1.0/direct?q=${location}&limit=1&appid=${API_KEY}`;
