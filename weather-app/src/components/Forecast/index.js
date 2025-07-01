@@ -10,20 +10,20 @@ export function Forecast() {
          `);
 
    const forecastContent = section.find(".forecast-container");
-   const dayCount = 5;
+   const DAY_COUNT = 5;
 
-   for (let count = 0; count < dayCount; count++) {
+   Array.from({ length: DAY_COUNT }).forEach((value, index) => {
       forecastContent.append(`
-      <div class="forecast-card card${count+1}">
+      <div class="forecast-card card${index + 1}">
          <p>--</p>
          <p>--</p>
-         <img alt="" />
+         <img alt="Forecast icon" />
          <p>--</p>
          <p>--&deg;</p>
          <p>--&deg;</p>
       </div>
       `);
-   }
+   });
 
    return section;
 }

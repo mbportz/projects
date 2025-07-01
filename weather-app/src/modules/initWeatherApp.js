@@ -1,7 +1,7 @@
 import {
    updateForecastWithCurrentLocation,
-   getWeatherForecastAndUpdate,
-} from "./weatherForecastHandler.js";
+   handleFormSubmit,
+} from "./main.js";
 
 import { Header } from "../components/Header";
 import { Weather } from "../components/Weather";
@@ -30,13 +30,6 @@ export function initWeatherApp() {
 
       updateForecastWithCurrentLocation();
 
-      $("#form-submit").click((e) => {
-         e.preventDefault();
-
-         const location = $("#form-input-location").val();
-         $("#form-input-location").val("");
-
-         getWeatherForecastAndUpdate(location);
-      });
+      $("#form-submit").click(handleFormSubmit);
    });
 }

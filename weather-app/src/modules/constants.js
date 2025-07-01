@@ -1,14 +1,15 @@
-import solidCloud from "../assets/images/cloud-solid.svg";
-import partlyCloudy from "../assets/images/partly-cloudy.svg";
-import sunny from "../assets/images/sun-solid.svg";
-import cloudyDay from "../assets/images/cloudy-day.svg";
-import rainyDay from "../assets/images/cloud-rain-solid.svg";
-import fewClouds from "../assets/images/weather-few-clouds-svgrepo-com.svg";
+import solidCloud from "../../public/assets/images/cloud-solid.svg";
+import partlyCloudy from "../../public/assets/images/partly-cloudy.svg";
+import sunny from "../../public/assets/images/sun-solid.svg";
+import cloudyDay from "../../public/assets/images/cloudy-day.svg";
+import rainyDay from "../../public/assets/images/cloud-rain-solid.svg";
+import fewClouds from "../../public/assets/images/weather-few-clouds-svgrepo-com.svg";
+import hardRain from "../../public/assets/images/rain-hard.svg";
 
-import wind from "../assets/images/wind-solid.svg";
-import humidity from "../assets/images/droplet-solid.svg";
-import visibility from "../assets/images/eye-solid.svg";
-import temp from "../assets/images/temperature-full-solid.svg";
+import wind from "../../public/assets/images/wind-solid.svg";
+import humidity from "../../public/assets/images/droplet-solid.svg";
+import visibility from "../../public/assets/images/eye-solid.svg";
+import temp from "../../public/assets/images/temperature-full-solid.svg";
 
 export const WEATHER_STATUS = {
    "broken clouds": { status: "Cloudy", src: solidCloud },
@@ -27,6 +28,7 @@ export const WEATHER_STATUS = {
       status: "Moderate Rain",
       src: rainyDay,
    },
+   "intensified rain": { status: "Heavy Rain", src: hardRain },
 };
 
 export const DAYS_OF_THE_WEEK = [
@@ -56,26 +58,26 @@ export const MONTHS = [
 
 export const weatherAttributes = [
    {
-      title: "-- km/h",
-      subtitle: "Wind Speed",
+      value: "-- km/h",
+      label: "Wind Speed",
       cardId: "weather-wind-speed",
       imgSrc: wind,
    },
    {
-      title: "--%",
-      subtitle: "Humidity",
+      value: "--%",
+      label: "Humidity",
       cardId: "weather-humidity",
       imgSrc: humidity,
    },
    {
-      title: "--km",
-      subtitle: "Visibility",
+      value: "--km",
+      label: "Visibility",
       cardId: "weather-visibility",
       imgSrc: visibility,
    },
    {
-      title: "--°",
-      subtitle: "Visibility",
+      value: "--°",
+      label: "Visibility",
       cardId: "weather-feels-like",
       imgSrc: temp,
    },

@@ -6,7 +6,7 @@ export function Header({ title, subTitle }) {
    header.html(`
          <h1>${title}</h1>
          <p>${subTitle}</p>
-         <form action="" class="form">
+         <form class="form">
             <input
                id="form-input-location"
                type="text"

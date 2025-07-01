@@ -1,5 +1,5 @@
 
-import "./styles/sass/main.scss";
+import "./styles.scss";
 import { initWeatherApp } from "./modules/initWeatherApp";
 
 initWeatherApp()

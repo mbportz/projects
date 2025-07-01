@@ -1,6 +1,6 @@
-@use "./components" as *;
-@import "../vendor/normalize.css";
-@import "../vendor/reset.css";
+@use "./styles/components/" as *;
+@import "../public/vendor/normalize.css";
+@import "../public/vendor/reset.css";
 
 body {
    font-family: "Inter", sans-serif;
