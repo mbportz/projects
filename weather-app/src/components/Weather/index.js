@@ -24,12 +24,12 @@ export function Weather() {
    const weatherContent = section.find("#weather-content");
 
    weatherAttributes.forEach((item) => {
-      const { title, subtitle, cardId, imgSrc } = item;
+      const { value, label, cardId, imgSrc } = item;
 
       weatherContent.append(
          WeatherCard({
-            title,
-            subtitle,
+            value,
+            label,
             cardId,
             imgSrc,
          })
