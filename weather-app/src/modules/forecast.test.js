@@ -1,7 +1,7 @@
 import { filterForecastByTime, formatDateTime } from "./forecast";
 
 jest.mock("./utils.js", () => ({
-   convertTimeZone: jest.fn((dt_txt, timeZone) => dt_txt), // stub: return input as is
+   convertTimeZone: jest.fn((dt_txt) => dt_txt), // stub: return input as is
 }));
 
 describe("filterForecastByTime", () => {
@@ -24,9 +24,8 @@ describe("filterForecastByTime", () => {
 describe("formatDateTime", () => {
    it("should return correct dayName and monthDay", () => {
       const dt_txt = "2025-07-01 12:00:00";
-      const timeZone = 0; // your mock ignores this
 
-      const result = formatDateTime(dt_txt, timeZone);
+      const result = formatDateTime(dt_txt, 0);
       expect(result).toEqual({
          dayName: "Wednesday",
          monthDay: "July 1",
