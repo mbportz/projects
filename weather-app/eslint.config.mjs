@@ -5,14 +5,6 @@ import { defineConfig } from "eslint/config";
 import eslintPluginJest from "eslint-plugin-jest";
 import eslintPluginJestModule from "eslint-plugin-jest";
 
-export const rulesOverride = {
-   files: ["**/*.css"],
-   rules: {
-      "css/use-baseline": ["off"],
-      ...eslintPluginJest.configs.recommended.rules,
-   },
-};
-
 export default defineConfig([
    {
       files: ["**/*.{js,mjs,cjs}", "**/*.test.js", "**/__tests__/**/*.js"],
@@ -41,5 +33,11 @@ export default defineConfig([
       language: "css/css",
       extends: ["css/recommended"],
    },
-   rulesOverride,
+   {
+      files: ["**/*.css"],
+      rules: {
+         "css/use-baseline": ["off"],
+         ...eslintPluginJest.configs.recommended.rules,
+      },
+   },
 ]);

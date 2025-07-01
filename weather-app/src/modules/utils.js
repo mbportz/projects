@@ -19,9 +19,7 @@ export function getCurrentLocation() {
 
 export function convertTimeZone(date, timeZone) {
    const newDate = new Date(date);
-
    const shiftInMs = timeZone * 1000;
-
    const localDate = new Date(newDate.getTime() + shiftInMs);
 
    return localDate.toLocaleString();
