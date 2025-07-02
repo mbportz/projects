@@ -1,0 +1,39 @@
+name: Weather App CI
+
+on:
+   push:
+      branches: [main]
+      paths:
+         - "weather-app/**"
+   pull_request:
+      branches: [main]
+      paths:
+         - "weather-app/**"
+
+jobs:
+   build:
+      runs-on: ubuntu-latest
+
+      steps:
+         - name: Checkout code
+           uses: actions/checkout@v3
+
+         - name: Setup Node.js
+           uses: actions/setup-node@v3
+           with:
+              node-version: 18
+
+         - name: Install weather-app dependencies
+           run: |
+              cd weather-app
+              npm ci
+
+         - name: Run ESLint (weather-app)
+           run: |
+              cd weather-app
+              npm run lint
+
+         - name: Run tests (weather-app)
+           run: |
+              cd weather-app
+              npm test
