@@ -1,6 +1,6 @@
 // jest.config.js
 
-module.exports = {
+export default {
    // Set the test environment to jsdom (browser-like)
    testEnvironment: "jsdom",
 
