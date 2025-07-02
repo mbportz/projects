@@ -1,7 +1,39 @@
+/**
+ * Webpack configuration file for the SkyCast weather app project.
+ *
+ * This configuration sets up a development environment with the following features:
+ * - Entry point: src/index.js
+ * - Output: Bundled JavaScript and assets in the 'dist' directory, with content hashes for cache busting.
+ * - Source maps enabled for easier debugging.
+ * - Development server with hot reloading, gzip compression, SPA fallback, and automatic browser opening.
+ * - Module rules for handling:
+ *   - CSS and SCSS/SASS files (extracted into separate CSS files)
+ *   - JavaScript files (transpiled using Babel with @babel/preset-env)
+ *   - Image assets (handled as resources and output to assets directory)
+ * - Plugins:
+ *   - HtmlWebpackPlugin: Generates an HTML file based on a template and injects scripts/styles.
+ *   - MiniCssExtractPlugin: Extracts CSS into a separate file.
+ *   - Dotenv: Loads environment variables from a .env file into the build process.
+ *
+ * @module webpack.config
+ * @requires path
+ * @requires html-webpack-plugin
+ * @requires mini-css-extract-plugin
+ * @requires dotenv-webpack
+ *
+ * @see {@link https://webpack.js.org/ Webpack Documentation}
+ * @see {@link https://github.com/jantimon/html-webpack-plugin HtmlWebpackPlugin}
+ * @see {@link https://github.com/webpack-contrib/mini-css-extract-plugin MiniCssExtractPlugin}
+ * @see {@link https://github.com/mrsteele/dotenv-webpack Dotenv Webpack}
+ */
+
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const Dotenv = require('dotenv-webpack');
+const Dotenv = require("dotenv-webpack");
+
+console.log("BASE_URL at build:", process.env.BASE_URL);
+console.log("API_KEY at build:", process.env.API_KEY);
 
 module.exports = {
    mode: "development", // Set mode to development

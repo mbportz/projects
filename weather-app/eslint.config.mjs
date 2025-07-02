@@ -17,8 +17,6 @@
  * @see {@link https://github.com/eslint-community/eslint-plugin-jest}
  * @see {@link https://github.com/eslint-community/eslint-plugin-css}
  */
-// ESLint configuration for weather-app project
-// This configures linting for JavaScript, CSS, and Jest test files.
 
 import js from "@eslint/js";
 import globals from "globals";
