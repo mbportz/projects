@@ -96,6 +96,8 @@ module.exports = {
       new MiniCssExtractPlugin({
          filename: "main.css", // Output CSS filename
       }),
-      new Dotenv(),
+      new Dotenv({
+         path: path.resolve(__dirname, "./.env"),
+      }),
    ],
 };
