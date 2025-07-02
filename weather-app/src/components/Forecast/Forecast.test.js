@@ -2,12 +2,10 @@ import { Forecast } from "./index";
 
 describe("Forecast component", () => {
    const $forecast = Forecast();
-   
+
    it("should return a <section> element with ID 'forecast'", () => {
-      // Check it's a section
       expect($forecast.prop("tagName")).toBe("SECTION");
 
-      // Check ID
       expect($forecast.attr("id")).toBe("forecast");
    });
 
