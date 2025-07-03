@@ -30,7 +30,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const Dotenv = require("dotenv-webpack");
 const webpack = require("webpack");
 
 module.exports = {
@@ -89,6 +88,7 @@ module.exports = {
          title: "SkyCast", // HTML title
          filename: "index.html", // Output HTML filename
          template: "src/index.html", // HTML template
+         favicon: "public/favicon_io/favicon-32x32.png",
       }),
       new MiniCssExtractPlugin({
          filename: "main.css", // Output CSS filename

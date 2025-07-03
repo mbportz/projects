@@ -30,7 +30,7 @@ export function updateWeatherForecastDOM(filteredForecasting, timeZone) {
       const { weather, main, dt_txt } = item;
       const { dayName, monthDay } = formatDateTime(dt_txt, timeZone);
       const dayLabel = index === 0 ? "Tomorrow" : dayName;
-      console.log(weather[0].description)
+
       $(`.card${index + 1} p`)
          .eq(0)
          .text(dayLabel);
