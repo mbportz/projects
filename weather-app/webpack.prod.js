@@ -1,30 +1,26 @@
 /**
- * Webpack configuration file for the SkyCast weather app project.
+ * Webpack production configuration for the SkyCast weather app.
  *
- * This configuration sets up a development environment with the following features:
- * - Entry point: src/index.js
- * - Output: Bundled JavaScript and assets in the 'dist' directory, with content hashes for cache busting.
- * - Source maps enabled for easier debugging.
- * - Development server with hot reloading, gzip compression, SPA fallback, and automatic browser opening.
- * - Module rules for handling:
- *   - CSS and SCSS/SASS files (extracted into separate CSS files)
- *   - JavaScript files (transpiled using Babel with @babel/preset-env)
- *   - Image assets (handled as resources and output to assets directory)
+ * Features:
+ * - Entry: src/index.js
+ * - Output: Bundled JS and assets in 'dist' with content hashes for cache busting.
+ * - CSS and SCSS/SASS extraction to separate files.
+ * - JavaScript transpilation using Babel (@babel/preset-env).
+ * - Image assets handled as resources and output to the assets directory.
  * - Plugins:
- *   - HtmlWebpackPlugin: Generates an HTML file based on a template and injects scripts/styles.
+ *   - HtmlWebpackPlugin: Generates HTML from a template and injects scripts/styles.
  *   - MiniCssExtractPlugin: Extracts CSS into a separate file.
- *   - Dotenv: Loads environment variables from a .env file into the build process.
+ *   - webpack.DefinePlugin: Injects environment variables into the build.
  *
- * @module webpack.config
+ * @module webpack.prod.js
  * @requires path
  * @requires html-webpack-plugin
  * @requires mini-css-extract-plugin
- * @requires dotenv-webpack
+ * @requires webpack
  *
- * @see {@link https://webpack.js.org/ Webpack Documentation}
- * @see {@link https://github.com/jantimon/html-webpack-plugin HtmlWebpackPlugin}
- * @see {@link https://github.com/webpack-contrib/mini-css-extract-plugin MiniCssExtractPlugin}
- * @see {@link https://github.com/mrsteele/dotenv-webpack Dotenv Webpack}
+ * @see https://webpack.js.org/
+ * @see https://github.com/jantimon/html-webpack-plugin
+ * @see https://github.com/webpack-contrib/mini-css-extract-plugin
  */
 
 const path = require("path");
@@ -42,16 +38,6 @@ module.exports = {
       filename: "[name][contenthash].js", // Output filename pattern
       clean: true, // Clean output dir before build
       assetModuleFilename: "assets/[name][hash][ext][query]", // Asset output pattern
-   },
-   devServer: {
-      static: {
-         directory: path.resolve(__dirname, "dist"), // Serve static files from dist
-      },
-      port: 3000, // Dev server port
-      open: true, // Open browser on start
-      hot: true, // Enable hot reloading
-      compress: true, // Enable gzip compression
-      historyApiFallback: true, // SPA fallback
    },
    module: {
       rules: [
