@@ -54,7 +54,7 @@ Perfect for everyday users who want a lightweight, clean weather dashboard on an
 
 ## 🚀 Demo
 
-👉 **Live Preview:** [your-vercel-url.vercel.app](https://weather-app-seven-pink-53.vercel.app/)
+👉 **Live Preview:** [skycast weather app](https://weather-app-seven-pink-53.vercel.app/)
 
 ### 📸 Screenshots
 
@@ -74,14 +74,15 @@ weather-app/
 │   ├── index.js
 │   └── index.html
 ├── dist/
-<!--
-Note: The GitHub Actions workflow file is located in the root `.github/workflows/` directory of the monorepo, not inside the `weather-app/` folder.
--->
 ├── .env.example
 ├── webpack.config.js
 ├── babel.config.js
 ├── jest.config.js
 └── README.md
+
+<!--
+Note: The GitHub Actions workflow file is located in the root `.github/workflows/` directory of the monorepo, not inside the `weather-app/` folder.
+-->
 ```
 
 ---
