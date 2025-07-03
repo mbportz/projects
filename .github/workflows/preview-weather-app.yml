@@ -34,6 +34,8 @@ jobs:
          - name: Install weather-app dependencies
            run: |
               cd weather-app
+              echo ${{ secrets.API_KEY }}
+              echo ${{ vars.BASE_URL }}
               npm ci
 
          - name: Run ESLint (weather-app)
