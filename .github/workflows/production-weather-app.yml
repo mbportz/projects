@@ -22,8 +22,8 @@ jobs:
         BASE_URL: ${{ vars.BASE_URL }}
 
       strategy:
-      matrix:
-        node-version: [18.x, 20.x, 22.x]
+        matrix:
+           node-version: [18.x, 20.x, 22.x]
 
       steps:
          - name: Checkout code
