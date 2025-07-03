@@ -34,7 +34,7 @@ const Dotenv = require("dotenv-webpack");
 const webpack = require("webpack");
 
 module.exports = {
-   mode: "development", // Set mode to development
+   mode: "production", // Set mode to development
    entry: {
       bundle: path.resolve(__dirname, "src/index.js"), // Entry point for app
    },
@@ -44,7 +44,6 @@ module.exports = {
       clean: true, // Clean output dir before build
       assetModuleFilename: "assets/[name][hash][ext][query]", // Asset output pattern
    },
-   devtool: "source-map", // Generate source maps
    devServer: {
       static: {
          directory: path.resolve(__dirname, "dist"), // Serve static files from dist
@@ -93,9 +92,6 @@ module.exports = {
       }),
       new MiniCssExtractPlugin({
          filename: "main.css", // Output CSS filename
-      }),
-      new Dotenv({
-         path: path.resolve(__dirname, "./.env"),
       }),
       new webpack.DefinePlugin({
          "process.env.BASE_URL": JSON.stringify(process.env.BASE_URL),
