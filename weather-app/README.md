@@ -148,7 +148,7 @@ cd projects/weather-app
 npm install
 
 # Start local dev server
-npm start
+npm run dev
 
 # Production build
 npm run build
