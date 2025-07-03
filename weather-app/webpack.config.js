@@ -31,7 +31,6 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const Dotenv = require("dotenv-webpack");
-const webpack = require("webpack");
 
 module.exports = {
    mode: "development", // Set mode to development
@@ -96,10 +95,6 @@ module.exports = {
       }),
       new Dotenv({
          path: path.resolve(__dirname, "./.env"),
-      }),
-      new webpack.DefinePlugin({
-         "process.env.BASE_URL": JSON.stringify(process.env.BASE_URL),
-         "process.env.API_KEY": JSON.stringify(process.env.API_KEY),
       }),
    ],
 };
