@@ -7,7 +7,8 @@
       "build-dev": "webpack --config webpack.dev.js",
       "dev": "webpack serve --config webpack.dev.js",
       "lint": "eslint ./src",
-      "test": "jest --verbose"
+      "test": "jest --verbose",
+      "dtest": "npm run lint && npm run test && npm run dev"
    },
    "keywords": [],
    "author": "",

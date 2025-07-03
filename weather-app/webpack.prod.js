@@ -88,6 +88,7 @@ module.exports = {
          title: "SkyCast", // HTML title
          filename: "index.html", // Output HTML filename
          template: "src/index.html", // HTML template
+         favicon: "public/favicon_io/favicon-32x32.png",
       }),
       new MiniCssExtractPlugin({
          filename: "main.css", // Output CSS filename
