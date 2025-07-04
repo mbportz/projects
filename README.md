@@ -1,8 +1,7 @@
-
 # 🚀 Projects Portfolio
 
 A personal collection of projects showcasing my work as a developer.  
-This portfolio includes projects I’ve built to practice, learn, and demonstrate my skills across different technologies.
+This portfolio includes independent repositories where I practice, learn, and demonstrate my skills across modern web and mobile technologies.
 
 ---
 
@@ -27,30 +26,36 @@ This portfolio includes projects I’ve built to practice, learn, and demonstrat
 
 ---
 
-## 🗂️ Projects
+## 📂 Main Projects
 
 | Project | Description | Tech Stack |
 |---------|-------------|------------|
-| [Portfolio](./portfolio/) | Personal portfolio website | HTML, CSS, JS, Sass, Vercel |
-| [Component Animations](./components-animation/) | Small experiments to practice UI animations | HTML, CSS |
-| [SkyCast Weather App](./weather-app/) | Modern responsive weather forecast app with CI/CD & live deploy | HTML, Sass, JS (ES6), jQuery, Webpack, Babel, Jest, ESLint, Vercel, GitHub Actions |
+| [Portfolio](https://github.com/mbportz/portfolio) | My personal developer portfolio and landing page | HTML, CSS, JavaScript, Sass, Vercel |
+| [SkyCast Weather App](https://github.com/mbportz/weather-app/) | Modern responsive weather forecast app with live data, CI/CD pipelines, and automated deploys | HTML, Sass, JavaScript (ES6), jQuery, Webpack, Babel, Jest, ESLint, Vercel, GitHub Actions |
+
+---
+
+## 📚 Collections & Experiments
+
+| Collection | Description | Tech Stack |
+|------------|-------------|-------------|
+| [Component Animations](https://github.com/mbportz/components-animation/) | A collection of small animation experiments & reusable UI animation snippets | HTML, CSS, Vanilla JavaScript |
 
 ---
 
 ## 📈 Goals
 
-- Practice and sharpen development skills
-- Explore modern web and mobile technologies
-- Build real-world, hands-on projects
-- Automate deploys with CI/CD pipelines
+- Practice and sharpen front-end and full-stack development skills
+- Explore modern web and mobile technologies hands-on
+- Build real-world mini-projects with CI/CD pipelines and modern best practices
 
 ---
 
 ## 📄 License
 
-This repository is open for learning, personal growth, and showcasing my work.  
-Feel free to explore, learn, and get inspired!
+These repositories are open for learning, personal growth, and showcasing my work.  
+Feel free to explore, fork, and get inspired!
 
 ---
 
-**Note:** This portfolio will continue to grow as I build and add more projects.
+**Note:** This portfolio will continue to grow as I build and publish more projects.
