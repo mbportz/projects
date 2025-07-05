@@ -48,6 +48,7 @@ This portfolio includes independent repositories where I practice, learn, and de
 | Collection | Description | Tech Stack |
 |------------|-------------|-------------|
 | [Component Animations](https://github.com/mbportz/components-animation/) | A collection of small animation experiments & reusable UI animation snippets | HTML, CSS, Vanilla JavaScript |
+| [Playing with Firebase](https://github.com/mbportz/learn-firebase/) | Experiments and practice snippets using Firebase for auth, database, and storage | JavaScript, Firebase |
 
 
 ---
