@@ -35,11 +35,20 @@ This portfolio includes independent repositories where I practice, learn, and de
 
 ---
 
+## 🏢 Client & Company Projects
+
+| Project | Description | Tech Stack |
+|---------|-------------|------------|
+| [Famgenix](https://famgenix.com/features/) | Developed and maintained core features for a mobile health-tech app. Integrated REST APIs, handled secure user data, and deployed to App Store & Play Store. | React Native, Expo, REST APIs, Git, Jira |
+
+---
+
 ## 📚 Collections & Experiments
 
 | Collection | Description | Tech Stack |
 |------------|-------------|-------------|
 | [Component Animations](https://github.com/mbportz/components-animation/) | A collection of small animation experiments & reusable UI animation snippets | HTML, CSS, Vanilla JavaScript |
+
 
 ---
 
