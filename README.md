@@ -32,6 +32,7 @@ This portfolio includes independent repositories where I practice, learn, and de
 |---------|-------------|------------|
 | [Portfolio](https://github.com/mbportz/portfolio) | My personal developer portfolio and landing page | HTML, CSS, JavaScript, Sass, Vercel |
 | [SkyCast Weather App](https://github.com/mbportz/weather-app/) | Modern responsive weather forecast app with live data, CI/CD pipelines, and automated deploys | HTML, Sass, JavaScript (ES6), jQuery, Webpack, Babel, Jest, ESLint, Vercel, GitHub Actions |
+| [React Native Movie App](https://github.com/mbportz/cinehub) | Full-featured movie app using Expo, React Native, Appwrite, TMDB API, TypeScript, and Tailwind styling | React Native, Expo, TypeScript, Expo Router, NativeWind, Tailwind CSS, Appwrite, TMDB API, ESLint, Babel |
 
 ---
 
@@ -49,7 +50,6 @@ This portfolio includes independent repositories where I practice, learn, and de
 |------------|-------------|-------------|
 | [Component Animations](https://github.com/mbportz/components-animation/) | A collection of small animation experiments & reusable UI animation snippets | HTML, CSS, Vanilla JavaScript |
 | [Playing with Firebase](https://github.com/mbportz/learn-firebase/) | Experiments and practice snippets using Firebase for auth, database, and storage | JavaScript, Firebase |
-
 
 ---
 
