@@ -28,6 +28,10 @@ This portfolio includes independent repositories where I practice, learn, and de
 ![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)
 ![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
 ![VSCode](https://img.shields.io/badge/VSCode-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
+![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![Redis](https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white)
+![JWT](https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=jsonwebtokens&logoColor=white)
 
 ---
 
@@ -55,6 +59,7 @@ This portfolio includes independent repositories where I practice, learn, and de
 |------------|-------------|-------------|
 | [Component Animations](https://github.com/mbportz/components-animation/) | A collection of small animation experiments & reusable UI animation snippets | HTML, CSS, Vanilla JavaScript |
 | [Playing with Firebase](https://github.com/mbportz/learn-firebase/) | Experiments and practice snippets using Firebase for auth, database, and storage | JavaScript, Firebase |
+| [Vanilla PHP REST API](https://github.com/mbportz/php-rest-api) | A fully working REST API using vanilla PHP with JWT, pagination, auth, rate limiting, and Swagger | PHP, MySQL, JWT, Redis, Postman, Swagger |
 
 ---
 
