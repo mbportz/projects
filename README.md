@@ -41,6 +41,7 @@ This portfolio includes independent repositories where I practice, learn, and de
 | [Portfolio](https://github.com/mbportz/portfolio) | My personal developer portfolio and landing page | HTML, CSS, JavaScript, Sass, Vercel |
 | [SkyCast Weather App](https://github.com/mbportz/weather-app/) | Modern responsive weather forecast app with live data, CI/CD pipelines, and automated deploys | HTML, Sass, JavaScript (ES6), jQuery, Webpack, Babel, Jest, ESLint, Vercel, GitHub Actions |
 | [React Native Movie App](https://github.com/mbportz/cinehub) | Full-featured movie app using Expo, React Native, Appwrite, TMDB API, TypeScript, and Tailwind styling | React Native, Expo, TypeScript, Expo Router, NativeWind, Tailwind CSS, Appwrite, TMDB API, ESLint, Babel |
+[Accessible UI Kit](https://github.com/mbportz/ui-kit) | Accessible React UI Kit with reusable components, Storybook integration, testing, and CI/CD pipelines | React, TypeScript, Storybook, Vitest, React Testing Library, ESLint, Husky, GitHub Actions |
 
 ---
 
