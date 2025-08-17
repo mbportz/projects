@@ -43,13 +43,6 @@ This portfolio includes independent repositories where I practice, learn, and de
 | [React Native Movie App](https://github.com/mbportz/cinehub) | Full-featured movie app using Expo, React Native, Appwrite, TMDB API, TypeScript, and Tailwind styling | React Native, Expo, TypeScript, Expo Router, NativeWind, Tailwind CSS, Appwrite, TMDB API, ESLint, Babel |
 [Todo List App](https://github.com/mbportz/todo) | Simple task manager app with add, edit, complete, and delete functionality, built with React, TypeScript, and Vite | React, TypeScript, Vite, TailwindCSS, ESLint |
 [Accessible UI Kit](https://github.com/mbportz/ui-kit) | Accessible React UI Kit with reusable components, Storybook integration, testing, and CI/CD pipelines | React, TypeScript, Storybook, Vitest, React Testing Library, ESLint, Husky, GitHub Actions |
-
----
-
-## 🏢 Client & Company Projects
-
-| Project | Description | Tech Stack |
-|---------|-------------|------------|
 | [Famgenix](https://famgenix.com/features/) | Developed and maintained core features for a mobile health-tech app. Integrated REST APIs, handled secure user data, and deployed to App Store & Play Store. | React Native, Expo, REST APIs, Git, Jira |
 
 ---
